@@ -7,7 +7,7 @@ import { UpdateUserInput } from './dto/update-user.input';
 export class UsersService {
   private readonly users = [
     { id: 1, username: 'usman', password: 'not-secure' },
-    { id: 2, username: 'laiba', password: 'not-secure' },
+    { id: 2, username: 'hassaan', password: 'not-secure' },
   ];
 
   create(createUserInput: CreateUserInput) {
@@ -17,6 +17,9 @@ export class UsersService {
     };
 
     this.users.push(user);
+
+    console.log('--------> users', this.users);
+
     return user;
   }
 
